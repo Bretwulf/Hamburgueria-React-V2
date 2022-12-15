@@ -14,7 +14,7 @@ import { UserContext } from "../../context/userContext";
 const Header = () => {
   const { logout } = useContext(UserContext);
   const mobile = useMediaQuery("(max-width: 900px)");
-  console.log(mobile);
+  
   const { cart, cartOn, setCartOn } = useContext(CartContext);
   const [searchMobile, setSearchMobile] = useState<boolean>(false);
   const { setSearch, setSearchState, searchState } = useContext(SearchContext);

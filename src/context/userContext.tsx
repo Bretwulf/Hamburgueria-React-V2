@@ -30,8 +30,10 @@ const UserProvider = ({ children }: iUserProps) => {
   const location = useLocation();
 
   useEffect(() => {
+    console.log(location)
     if (location.pathname === "/login" || location.pathname === "/cadastro")
       autoLogin();
+      
   }, [location]);
 
   const logout: () => void = () => {
@@ -69,7 +71,7 @@ const UserProvider = ({ children }: iUserProps) => {
       });
       localStorage.setItem("Token", response.data.accessToken);
       localStorage.setItem("User", JSON.stringify(response.data.user.name));
-      navigate("/");
+      navigate("/home");
     } catch (error) {
       const typedError = error as AxiosError<iError>;
       toast.error<iError | undefined>(
@@ -92,7 +94,6 @@ const UserProvider = ({ children }: iUserProps) => {
       const response = await API.post<iRegisterResponse>("/users", data, {
         headers: { "Content-Type": "application/json" },
       });
-      console.log(response.data);
       toast.success(`Registrado com sucesso!`, {
         position: "top-right",
         autoClose: 1200,

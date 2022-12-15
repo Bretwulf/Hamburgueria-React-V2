@@ -33,7 +33,6 @@ const LoginPage = () => {
         <AsideLoginMobile />
         <Form
           onSubmit={handleSubmit((data) => {
-            console.log(data);
             login(data);
           })}
         >

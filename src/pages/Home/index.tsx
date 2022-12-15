@@ -6,7 +6,6 @@ import { useState } from "react";
 import Cart from "./cart";
 
 const Home = () => {
-  console.log("estou na home");
   return (
     <div>
       <Header />

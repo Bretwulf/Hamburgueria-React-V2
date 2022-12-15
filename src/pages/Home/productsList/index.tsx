@@ -42,7 +42,6 @@ const ProductList = () => {
         });
         setProducts(response.data);
       } catch (error) {
-        console.log(error);
         toast.warn("Autenticação falhou. Faça login novamente!", {
           position: "top-right",
           autoClose: 1200,

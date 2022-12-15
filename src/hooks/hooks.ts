@@ -20,7 +20,7 @@ export const usePersistentState: () => iPState = () => {
       const newCart: iCartObject[] = JSON.parse(storedCart);
       setCart(newCart);
     } else {
-      console.log("passo aqui?");
+      
       setCart([]);
     }
   }, [location]);
@@ -28,7 +28,7 @@ export const usePersistentState: () => iPState = () => {
     if (mount) {
       const cartToStorage: string = JSON.stringify(cart);
       localStorage.setItem("Cart", cartToStorage);
-      console.log(cart);
+     
     }
   }, [cart]);
 

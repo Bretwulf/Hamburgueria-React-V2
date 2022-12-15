@@ -16,8 +16,8 @@ export const usePersistentState: () => iPState = () => {
       localStorage.getItem("Cart") !== "null" &&
       localStorage.getItem("Cart") !== null
     ) {
-      const storedCart: any = localStorage.getItem("Cart");
-      const newCart: iCartObject[] = JSON.parse(storedCart);
+      const storedCart: string | null = localStorage.getItem("Cart");
+      const newCart: iCartObject[] = JSON.parse(storedCart!);
       setCart(newCart);
     } else {
       

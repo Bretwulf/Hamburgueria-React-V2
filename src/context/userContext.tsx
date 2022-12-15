@@ -30,7 +30,6 @@ const UserProvider = ({ children }: iUserProps) => {
   const location = useLocation();
 
   useEffect(() => {
-    console.log(location)
     if (location.pathname === "/login" || location.pathname === "/cadastro")
       autoLogin();
       

@@ -1,7 +1,7 @@
 # Hamburgueria - V2
 
-Projeto de hamburgueria com login e cadastro funcional, vitrine de produtos e carrinho 100% funcionais. Também conta com proteção de rotas e autologin, baseados no localStorage.
-Totalmente responsive para o mobile!
+Projeto de hamburgueria com login e cadastro funcional, vitrine de produtos e carrinho que seguem padrão de aplicativos de compras de fast-food modernos. Também conta com proteção de rotas e autologin, baseados no localStorage.
+Totalmente responsivo para o mobile!
 
 ### Para esse projeto foram utilizados:
 - Typescript
